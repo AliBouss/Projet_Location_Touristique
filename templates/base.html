@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" >
 
     <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="{% url 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/ie10-viewport-bug-workaround.css' %}">
 
@@ -41,11 +41,25 @@
 <body>
 <div class="page_loader"></div>
 
+{% include 'includes/topbar.html' %}
+
+{% include 'includes/navbar.html' %}
+
 
 {% block content %}
 
-
 {% endblock%}
+
+<!-- Full Page Search -->
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" />
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
+
+{% include 'includes/footer.html' %}
 
 
 <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
