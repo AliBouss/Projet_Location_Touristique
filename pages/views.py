@@ -13,10 +13,6 @@ def about(request):
     return render(request, 'pages/about.html', {"teams": teams})
 
 
-def location(request):
-    return render(request, 'pages/location.html')
-
-
 def services(request):
     return render(request, 'pages/services.html')
 
